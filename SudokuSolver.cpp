@@ -1,6 +1,6 @@
 
 
-#include <stdio.h> //backtracking program, need this to work
+#include <stdio.h> 
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -8,12 +8,10 @@
 using namespace std;
 
 bool helper(vector<vector<int>>&board);
-
 bool isValid(vector<vector<int>> & board, int num,int row,int col);
 void willPrint(vector<vector<int>>& puzzle);
 
 bool helper(vector<vector<int>>&board)
-
 {
     for ( int i = 0; i<board.size();++i)
     {
@@ -79,7 +77,7 @@ bool isValid( vector<vector<int>>& board, int num, int row, int col)
         b+=3;
     }
     
-    for ( a; a<x;++a) //increment i && increment j, if you assign i=a or j=b, bad access
+    for ( a; a<x;++a) 
     {
         for ( b; b<y;++b)
         { if(board[a][b]==num && a!=row && b!=col)
@@ -88,8 +86,6 @@ bool isValid( vector<vector<int>>& board, int num, int row, int col)
         }
         }
     }
-    
-    
     return true;
 }
 
@@ -98,47 +94,25 @@ void willPrint(vector<vector<int>>& puzzle){
     int t=3;
     
     for ( int i = 0; i<puzzle.size();++i)
-        
     {
-        
-        int s=3;
-        
-        
+       int s=3;
         for ( int j = 0; j<puzzle[0].size();++j)
-            
-        {
-            
+         {
             cout<<puzzle[i][j];
-            
             if(j+1==s)
-                
             {
-                
                 cout<<"   "; //separate columns
-                
-                s+=s;
-                
-            }
-            
-        }
+                 s+=s;
+         }
+    }
         
         if (i+1==t)
-            
         {
-            
             cout<<""<<endl;//separate rows
-            
             t+=t;
-            
         }
-        
-        
-        
         cout<<endl;
-        
     }
-    
-    
 }
 
 int main() {
@@ -151,9 +125,9 @@ int main() {
     
     rows[0][0]=5;  rows[0][4]=7;   rows[2][7]=6;
     
-    rows[0][1]=3;  rows[1][3]=1;   //rows[1[1]=3;//fake
+    rows[0][1]=3;  rows[1][3]=1;  
     
-    rows[1][0]=6;  rows[1][4]=9;   //rows[4][4]=6;//fake
+    rows[1][0]=6;  rows[1][4]=9;   
     
     rows[2][1]=9;  rows[1][5]=5;
     
