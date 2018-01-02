@@ -142,7 +142,7 @@ void willPrint(vector<vector<int>>& puzzle){
 
 int main() {
     
-    // your code goes here
+/*
     
     vector<int>columns(9,0); 
     
@@ -181,7 +181,7 @@ int main() {
     rows[8][7]=7;
     
     rows[8][8]=9; //test inputs
-    
+    */
     cout<< "The puzzle before compiling:"<<endl;
     willPrint(rows);
     
